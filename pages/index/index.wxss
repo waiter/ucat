@@ -1,0 +1,105 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #ef5b30;
+  position: relative;
+  height: 168rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx 20rpx 20rpx 40rpx;
+  border-radius: 50%;
+}
+
+.userinfo-text-view {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+  align-items: space-around;
+}
+
+.userinfo-nickname {
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #fff;
+}
+
+.word-rank {
+  position: absolute;
+  right: 30rpx;
+  top: 35rpx;
+  font-size: 100rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.item-title {
+  margin-top: 10rpx;
+  background: #ef5b30;
+  padding: 10rpx;
+  color: #fff;
+  font-weight: bold;
+}
+
+.cats-scroll {
+  height: 600rpx;
+}
+
+.cats-all {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 600rpx;
+}
+
+.catView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200rpx;
+  padding: 16rpx 4rpx;
+  text-align: center;
+  height: 168rpx;
+}
+
+.cat_pic {
+  width: 128rpx;
+  height: 128rpx;
+  margin-bottom: 5rpx;
+}
+
+.cat_word {
+  width: 200rpx;
+  font-size: 30rpx;
+}
+
+/*.card-scroll {
+  height: 600rpx;
+}*/
+
+.card-all {
+  display: flex;
+  flex-direction: row;
+}
+
+.card_view {
+  width: 500rpx;
+  background-color: #fff;
+  margin: 20rpx 20rpx 30rpx;
+}
+
+.card_pic {
+  width: 500rpx;
+  height: 715rpx;
+}
+
+.card_copy {
+  width: 500rpx;
+  border-radius: 0;
+  font-size: 30rpx;
+}

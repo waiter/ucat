@@ -1,0 +1,33 @@
+<!--logs.wxml-->
+<import src="../../templates/quan.wxml"/>
+<view class="container">
+  <view class="log-title">
+    <checkbox-group class="log-title-item" bindchange="checkChange">
+      <label wx:for="{{show}}" wx:key="*this">
+        <checkbox value="{{item}}" checked="{{cur[item]}}"/>{{word[item]}}
+      </label>
+    </checkbox-group>
+    <view class="log-title-item">
+      <text>总共<text class="log-word-high">{{len}}</text>个优惠信息</text>
+      <text>①点击<text class="log-word-high">复制链接</text></text>
+      <text>②前往<text class="log-word-high">浏览器</text>中打开领券</text>
+    </view>
+  </view>
+  <view class="log-list">
+    <block wx:if="{{cur.tb}}">
+      <block wx:for="{{datas.tb}}" wx:key="unique">
+        <template is="quan" data="{{p: pp + item.p, u: 'http://c.b1wv.com/' + item.u + '?cv=' + item.k, k: '￥' + item.k + '￥'}}" />
+      </block>
+    </block>
+    <block wx:if="{{cur.mgj}}">
+      <block wx:for="{{datas.mgj}}" wx:key="unique">
+        <template is="quan" data="{{p: pp + item.p, u: 'http://d.mogujie.cn/' + item.u}}" />
+      </block>
+    </block>
+    <block wx:if="{{cur.other}}">
+      <block wx:for="{{datas.other}}" wx:key="unique">
+        <template is="quan" data="{{p: pp + item.p, u: item.u}}" />
+      </block>
+    </block>
+  </view>
+</view>

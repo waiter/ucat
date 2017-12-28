@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<import src="../../templates/cat"/>
+<import src="../../templates/card"/>
+<view class="container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <view class="userinfo-text-view">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname">撸猫{{count}}次</text>
+    </view>
+    <view class="word-rank" catchtap="bindRankTap">
+      <text>榜</text>
+    </view>
+  </view>
+  <view class="item-title">喵喵喵（点击就能逗喵啦~）</view>
+  <scroll-view scroll-x class="cats-scroll">
+    <view class="cats-all">
+      <block wx:for="{{catConfig}}" wx:key="vu">
+        <template is="cat" data="{{ name: item.name, pic: '../../res/images/' + item.pic, sound: item.sound }}"/>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="item-title">领优惠券啦（领券后淘宝更优惠~）</view>
+  <scroll-view scroll-x class="card-scroll">
+    <view class="card-all">
+      <block wx:for="{{datas}}" wx:key="unique">
+        <template is="card" data="{{p: pp + item.p, u: 'http://c.b1wv.com/' + item.u + '?cv=' + item.k, k: '￥' + item.k + '￥', act: cur}}" />
+      </block>
+      <view style="color: #fff; opacity: 0;">.</view>
+    </view>
+  </scroll-view>
+</view>

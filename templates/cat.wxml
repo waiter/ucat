@@ -1,0 +1,6 @@
+<template name="cat">
+  <view data-sound="{{sound}}" catchtap="bindItemTap" class="catView">
+    <image src="{{pic}}" class="cat_pic"></image>
+    <text class="cat_word">{{name}}</text>
+  </view>
+</template>

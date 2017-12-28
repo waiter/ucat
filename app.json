@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ef5b30",
+    "navigationBarTitleText": "逗猫逗逗逗",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#ef5b30"
+  }
+}

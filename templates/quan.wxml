@@ -1,0 +1,13 @@
+<template name="quan">
+  <view class="quan_view">
+    <image bindtap="showPic" data-show="{{p}}" src="{{p}}" class="quan_pic"></image>
+    <view class="quan_btn_view">
+      <button data-id="{{u}}" plain="true" class="quan_copy" catchtap="bindCopy">复制链接</button>
+      <block wx:if="{{k}}">
+        <button data-id="{{k}}" plain="true" class="quan_copy_t" catchtap="bindCopyT">复制淘口令</button>
+      </block>
+    </view>
+    
+    <!--<button data-id="{{log}}" size="mini" plain="true" class="quan_del" catchtap="bindDel">不再展示</button>-->
+  </view>
+</template>
