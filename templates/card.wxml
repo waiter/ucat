@@ -1,6 +1,6 @@
 <template name="card">
   <view class="card_view">
     <image bindtap="showPic" data-show="{{p}}" src="{{p}}" class="card_pic"></image>
-    <button data-id="{{k}}" class="card_copy" type="primary" catchtap="bindCopy">{{act === k ? '快打开「手机淘宝」领券购买！' : '领券购买'}}</button>
+    <button data-show="{{p}}" class="card_copy" type="primary" catchtap="showPic">点击后长按识别二维码</button>
   </view>
 </template>

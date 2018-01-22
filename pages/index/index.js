@@ -28,7 +28,9 @@ Page({
     })
   },
   onShareAppMessage: function() {
-    return {};
+    return {
+      title: '逗逗喵，拿拿内部优惠券领取！'
+    };
   },
   playSound: function(sound, needAdd) {
     var that = this
@@ -38,7 +40,10 @@ Page({
         wx.playVoice({
           filePath: res.path,
           success: r1 => console.log('打开文档成功'),
-          fail: e1 => console.log(e1)
+          fail: e1 => {
+              console.log(e1);
+              fileUtil.deleteKey(sound)
+            }
         })
         if (needAdd) {
           const count = that.data.count + 1;
@@ -60,12 +65,12 @@ Page({
   getLists: function (needStop) {
     var that = this
     wx.request({
-      url: 'https://www.waitergame.top/index.php/config/we.cat.v2',
+      url: 'https://www.waitergame.top/index.php/config/we.cat',
       success: function (data) {
         const rd = data.data
         if (rd && rd.state == 1 && rd.msg) {
           that.setData({
-            datas: JSON.parse(rd.msg.tb),
+            datas: JSON.parse(rd.msg.mgj),
             pp: rd.msg.pp
           })
         }

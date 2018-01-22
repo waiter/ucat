@@ -20,11 +20,11 @@
       </block>
     </view>
   </scroll-view>
-  <view class="item-title">领优惠券啦（领券后淘宝更优惠~）</view>
+  <view class="item-title">内部优惠券（点击后长按识别二维码）</view>
   <scroll-view scroll-x class="card-scroll">
     <view class="card-all">
       <block wx:for="{{datas}}" wx:key="unique">
-        <template is="card" data="{{p: pp + item.p, u: 'http://c.b1wv.com/' + item.u + '?cv=' + item.k, k: '￥' + item.k + '￥', act: cur}}" />
+        <template is="card" data="{{p: pp + item}}" />
       </block>
       <view style="color: #fff; opacity: 0;">.</view>
     </view>

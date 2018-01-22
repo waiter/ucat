@@ -88,18 +88,18 @@
 }
 
 .card_view {
-  width: 500rpx;
+  width: 450rpx;
   background-color: #fff;
   margin: 20rpx 20rpx 30rpx;
 }
 
 .card_pic {
-  width: 500rpx;
-  height: 715rpx;
+  width: 450rpx;
+  height: 768rpx;
 }
 
 .card_copy {
-  width: 500rpx;
+  width: 450rpx;
   border-radius: 0;
   font-size: 30rpx;
 }

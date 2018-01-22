@@ -35,7 +35,11 @@ const fileUtil = {
     } else {
       obj.fail || obj.fail({ errMsg: '必须传key和success' })
     }
-  }
+  },
+  deleteKey: function(key) {
+    delete fileUtil._paths[key]
+    wx.setStorageSync('files', fileUtil._paths)
+  },
 }
 
 module.exports = fileUtil
